@@ -21,7 +21,7 @@ public class BunParameterizedTest {
         return new Object[][]{
                 {"Big bun", Float.MAX_VALUE},
                 {"Little bun", Float.MIN_VALUE},
-                {"Обычная булочка", 0},
+                {"Воздушная булочка", 0},
                 {"Космическая-булочка", 1.5f},
                 {"Space-bun", -1.5f},
                 {"!@#$%^&*()/-+", 10f},

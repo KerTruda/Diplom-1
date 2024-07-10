@@ -38,7 +38,7 @@ public class BurgerTest {
     @Test
     public void addIngredientTest(){
         burger.addIngredient(ingredientOne);
-        assertTrue(burger.ingredients.size() > 0);
+        assertTrue(!burger.ingredients.isEmpty());
     }
 
     @Test
