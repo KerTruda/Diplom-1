@@ -45,7 +45,7 @@ public class BurgerTest {
     public void removeIngredientTest(){
         burger.addIngredient(ingredientOne);
         burger.removeIngredient(0);
-        assertTrue(burger.ingredients.size() == 0);
+        assertTrue(burger.ingredients.isEmpty());
     }
 
     @Test
@@ -53,7 +53,7 @@ public class BurgerTest {
         burger.addIngredient(ingredientOne);
         burger.addIngredient(ingredientTwo);
         burger.moveIngredient(0, 1);
-        assertTrue(burger.ingredients.indexOf(ingredientOne) == 1);
+        assertEquals(1, burger.ingredients.indexOf(ingredientOne));
     }
 
     @Test
@@ -66,7 +66,7 @@ public class BurgerTest {
         Mockito.when(ingredientOne.getPrice()).thenReturn(1f);
         Mockito.when(ingredientTwo.getPrice()).thenReturn(1f);
 
-        assertTrue(burger.getPrice() == 4f);
+        assertEquals(4f, burger.getPrice(), 0.0);
     }
 
     @Test
